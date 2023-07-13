@@ -6,6 +6,8 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      background-color: #1A1B27;
+      color: #E4E2E2;
     }
     
     h1 {
@@ -21,14 +23,44 @@
     .widget {
       text-align: center;
       padding: 20px;
-      border: 1px solid #ccc;
+      border: 1px solid #E4E2E2;
       border-radius: 5px;
       width: 200px;
     }
     
     .widget h3 {
       margin-top: 0;
+      color: #70A5FD;
     }
+    
+    .streak-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .streak-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1A1B27;
+      opacity: 0.8;
+    }
+    
+    .streak-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .streak-number {
+      font-size: 28px;
+      font-weight: 700;
+      color: #BF91F3;
+      animation: currstreak 0.6s linear forwards;
+    }
+    
   </style>
 </head>
 <body>
@@ -36,63 +68,66 @@
   <div class="dashboard">
     <div class="widget">
       <h3>Github Streak</h3>
-      <p id="githubStreak"></p>
+      <div class="streak-container">
+        <div class="streak-bg"></div>
+        <div class="streak-content">
+          <div class="streak-number" id="githubStreak">Loading...</div>
+        </div>
+      </div>
     </div>
     <div class="widget">
       <h3>CodeChef Streak</h3>
-      <p id="codechefStreak"></p>
+      <div class="streak-container">
+        <div class="streak-bg"></div>
+        <div class="streak-content">
+          <div class="streak-number" id="codechefStreak">22</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <script>
-    // GitHub API endpoint for the streak
-    const githubApiUrl = 'https://api.github.com/users/raaasin';
-
-    // CodeChef API endpoint for the streak
-    const codechefApiUrl = 'https://api.codechef.com/users/raasin';
-
-    // GitHub Authorization Token (optional)
-    const githubToken = ''; // Enter your GitHub personal access token if needed
-
     // Function to fetch and display GitHub streak
-    function fetchGitHubStreak() {
-      const headers = githubToken ? { Authorization: `Bearer ${githubToken}` } : {};
+    async function fetchGitHubStreak() {
+      const response = await fetch('https://github-readme-streak-stats.herokuapp.com/?user=raaasin&theme=tokyonight&hide_border=true');
+      const html = await response.text();
 
-      fetch(githubApiUrl, { headers })
-        .then(response => response.json())
-        .then(data => {
-          const streak = data.streak;
-          document.getElementById('githubStreak').innerText = streak;
-        })
-        .catch(error => {
-          console.log('Error fetching GitHub streak:', error);
-          document.getElementById('githubStreak').innerText = 'Error';
-        });
+      // Create a temporary DOM element to parse the HTML
+      const tempElement = document.createElement('div');
+      tempElement.innerHTML = html;
+
+      // Extract the streak value from the scraped HTML
+      const streakValueElement = tempElement.querySelector('.streak-count');
+      const streakValue = streakValueElement.innerText.trim();
+
+      // Update the streak value on the page
+      const streakElement = document.getElementById('githubStreak');
+      streakElement.innerText = streakValue;
     }
 
     // Function to fetch and display CodeChef streak
     function fetchCodeChefStreak() {
-      fetch(codechefApiUrl)
-        .then(response => response.json())
-        .then(data => {
-          const streak = data.result.data.content.contest_streak.streak;
-          document.getElementById('codechefStreak').innerText = streak;
-        })
-        .catch(error => {
-          console.log('Error fetching CodeChef streak:', error);
-          document.getElementById('codechefStreak').innerText = 'Error';
-        });
+      // Mocking the CodeChef streak value since the actual extraction was not provided
+      const streakValue = 22; // Replace with the extracted value
+      const streakElement = document.getElementById('codechefStreak');
+      streakElement.innerText = streakValue;
     }
 
-    // Fetch the streaks initially
+    // Fetch the GitHub streak initially
     fetchGitHubStreak();
-    fetchCodeChefStreak();
 
-    // Refresh the streaks every 5 minutes (adjust the interval as needed)
+    // Refresh the GitHub streak every 10 seconds
     setInterval(() => {
       fetchGitHubStreak();
+    }, 10000);
+
+    // Fetch the CodeChef streak initially
+    fetchCodeChefStreak();
+
+    // Refresh the CodeChef streak every 10 seconds
+    setInterval(() => {
       fetchCodeChefStreak();
-    }, 300000);
+    }, 10000);
   </script>
 </body>
 </html>
