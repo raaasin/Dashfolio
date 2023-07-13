@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodeChef Badge Progress</title>
+</head>
+<body>
+  <h1>CodeChef Badge Progress:</h1>
+  <div id="badgeProgress"></div>
+
+  <script>
+    // Fetch the webpage content
+    fetch("https://www.codechef.com/users/raasin")
+      .then(response => response.text())
+      .then(data => {
+        // Create a temporary element to store the webpage content
+        let tempElement = document.createElement('div');
+        tempElement.innerHTML = data;
+
+        // Extract the value from the span element with class "badge__progress"
+        let badgeProgress = tempElement.querySelector('.badge__progress').innerHTML;
+
+        // Display the extracted value on the webpage
+        document.getElementById('badgeProgress').textContent = badgeProgress;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        document.getElementById('badgeProgress').textContent = "Error retrieving data";
+      });
+  </script>
+</body>
+</html>
