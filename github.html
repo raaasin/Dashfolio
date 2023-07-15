@@ -1,0 +1,31 @@
+<img class="streak-image" src="https://github-readme-streak-stats.herokuapp.com/?user=raaasin&theme=tokyonight&hide_border=true" alt="Github Streak">
+
+<html>
+    <body>
+
+    </body>
+    <script>
+        // GitHub repository URL and file path
+var githubUrl = '"https://github-readme-streak-stats.herokuapp.com';
+// Create a new XMLHttpRequest
+var xhr = new XMLHttpRequest();
+
+// Set up the request
+xhr.open('GET', githubUrl + '/?user=raaasin&theme=tokyonight&hide_border=true' + filePath, true);
+
+// Define the callback function
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    // Retrieve the response text
+    var sourceCode = xhr.responseText;
+
+    // Append the source code to the <body> tag
+    document.body.innerHTML += '<pre>' + sourceCode + '</pre>';
+  }
+};
+
+// Send the request
+xhr.send();
+
+    </script>
+</html>
