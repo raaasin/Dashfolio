@@ -1,0 +1,983 @@
+<div class="user-profile-container">
+ <div class="row">
+  <div class="content-area small-8 columns">
+   <div class="user-details-container plr10">
+    <header>
+     <img alt="user profile" class="profileImage" height="70px" src="https://cdn.codechef.com/sites/default/files/uploads/pictures/4182a9406021b2b92470d9163b00b559.png" width="70px">
+      <h1 class="h2-style">
+       Nisar Ahmed
+      </h1>
+     </img>
+    </header>
+    <section class="user-details">
+     <ul class="side-nav">
+      <li>
+       <label>
+        Username:
+       </label>
+       <span>
+        <span class="rating" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #1E7D22;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">
+         2★
+        </span>
+        <span class="m-username--link">
+         raasin
+        </span>
+       </span>
+      </li>
+      <li>
+       <label>
+        Country:
+       </label>
+       <span>
+        <img class="user-country-flag" src="https://cdn.codechef.com/download/flags/24/in.png" title="IN"/>
+        <span class="user-country-name" style="vertical-align:bottom">
+         India
+        </span>
+       </span>
+      </li>
+      <li>
+       <label>
+        Motto:
+       </label>
+       <span>
+        Never really liked memorizing, I understand my mistakes.
+       </span>
+      </li>
+      <li>
+       <label>
+        Student/Professional:
+       </label>
+       <span>
+        Student
+       </span>
+      </li>
+      <li>
+       <label>
+        Institution:
+       </label>
+       <span>
+        Vignan's Institute Of Information Technology, Visakhapatnam
+       </span>
+      </li>
+      <li>
+       <label>
+        Teams List:
+       </label>
+       <span>
+        List of
+        <a href="/users/raasin/teams">
+         teams
+        </a>
+        by Nisar Ahmed
+       </span>
+      </li>
+      <li>
+       <label>
+        Discuss Profile:
+       </label>
+       <span>
+        <a href="https://discuss.codechef.com/u/raasin" target="_blank">
+         https://discuss.codechef.com/u/raasin
+        </a>
+       </span>
+      </li>
+      <li>
+       <label>
+        CodeChef Pro Plan:
+       </label>
+       <span>
+        No Active Plan.
+        <a href="/pro?itm_medium=profile-plan&amp;itm_campaign=CC_Pro" target="_blank">
+         View Details
+        </a>
+       </span>
+      </li>
+     </ul>
+    </section>
+    <!--.user-details-->
+    <section class="heatmap-container" style="margin-top: 20px;">
+     <div class="heatmap-title-container">
+      <h3>
+       Activity Heat Map
+      </h3>
+      <span style="margin-left: 6px;">
+       <sup style="background-color: #ffe500;color: black;padding: 3px 6px;text-align: center;border-radius: 3px;font-size: 10px;">
+        New
+       </sup>
+      </span>
+     </div>
+     <div>
+      (Last 6 Months)
+     </div>
+     <div class="heatmap-content" id="js-heatmap">
+     </div>
+    </section>
+    <!--submission-heat-map-->
+    <section class="rating-graphs rating-data-section">
+     <div class="rating-title-container">
+      <h3>
+       Rating Graph
+      </h3>
+      <div class="contest-participated-count">
+       No. of Contests Participated:
+       <b>
+        6
+       </b>
+      </div>
+     </div>
+     <div class="ratings-graph-change-button" id="all-ratings-graph-buttons">
+      <button id="graph-button-all" onclick="ratingGraphSelection(false, false)">
+       Current Ratings Graph
+      </button>
+      <button id="graph-button-all-old" onclick="ratingGraphSelection(true, false)">
+       Old Ratings Graph
+      </button>
+     </div>
+     <div class="tabs-content">
+      <section aria-hidden="false" class="content active" id="cumulative" role="tabpanel" style="display: none">
+       <div class="rank-stats">
+        <div class="left" style="background-color: #1E7D22">
+         <div class="rating-container">
+          <a class="rating" href="https://www.codechef.com/ratings/all">
+           1507 (
+           <span class="rating-difference">
+            +81
+           </span>
+           )
+          </a>
+          <small id="actual-rating-status-all" style="display: block">
+           Rating
+          </small>
+          <small id="provisional-rating-status-all" style="display: none">
+           Provisional
+           <br/>
+           Rating
+           <a class="tooltips rating-tooltip" href="https://discuss.codechef.com/t/elo-mmr-ratings-go-live-on-codechef/102184/31" target="_blank">
+            i
+            <span class="tooltiptext">
+             Provisional Rating, click to know more
+            </span>
+           </a>
+          </small>
+         </div>
+        </div>
+        <div class="left">
+         <div id="rating-box-all">
+          <div class="contest-name">
+           <a href="https://www.codechef.com/START66C">
+            Starters 66 Division 3 (Rated)
+           </a>
+           <span class="time">
+            (2022-11-23 23:00:04)
+           </span>
+          </div>
+          <div id="global-rank-all">
+           <small>
+            Global Rank:
+           </small>
+           <strong class="global-rank">
+            403
+           </strong>
+          </div>
+          <div style="display: none">
+           <small>
+            Plagiarised in:
+           </small>
+           <strong class="cheated-contest">
+           </strong>
+          </div>
+         </div>
+         <div id="rating-change-desc-all" style="display: none">
+          <div>
+           <p style="font-size: 14px; margin: 0px">
+            Ratings System Update
+           </p>
+           <span class="time">
+            (2022-11-23 23:00:04)
+           </span>
+          </div>
+          <small>
+           This is the difference due to changing the rating system.
+          </small>
+          <small>
+           This graph is not updated after 20th Dec 2022.
+          </small>
+          <a href="https://discuss.codechef.com/t/rating-system-update/104510">
+           Know more
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="ml-10" id="cumulative-graph">
+       </div>
+      </section>
+      <section aria-hidden="false" class="content active" id="cumulative-old" role="tabpanel" style="display: none">
+       <div class="rank-stats">
+        <div class="left" style="background-color: #1E7D22">
+         <div class="rating-container">
+          <a class="rating" href="https://www.codechef.com/ratings/all">
+           1507 (
+           <span class="rating-difference">
+            +0
+           </span>
+           )
+          </a>
+          <small id="actual-rating-status-all-old" style="display: block">
+           Rating
+          </small>
+          <small id="provisional-rating-status-all-old" style="display: none">
+           Provisional
+           <br/>
+           Rating
+           <a class="tooltips rating-tooltip" href="https://discuss.codechef.com/t/elo-mmr-ratings-go-live-on-codechef/102184/31" target="_blank">
+            i
+            <span class="tooltiptext">
+             Provisional Rating, click to know more
+            </span>
+           </a>
+          </small>
+         </div>
+        </div>
+        <div class="left">
+         <div id="rating-box-all-old" style="display: none">
+          <div class="contest-name">
+           <a href="https://www.codechef.com/RATING_SHIFT_TO_ELO_RATING_CODE">
+            Starters 66 Division 3 (Rated)
+           </a>
+           <span class="time">
+            (2022-12-20 00:00:00)
+           </span>
+          </div>
+          <div id="global-rank-all-old">
+           <small>
+            Global Rank:
+           </small>
+           <strong class="global-rank">
+            403
+           </strong>
+          </div>
+          <div style="display: none">
+           <small>
+            Plagiarised in:
+           </small>
+           <strong class="cheated-contest">
+           </strong>
+          </div>
+         </div>
+         <div id="rating-change-desc-all-old">
+          <div>
+           <p style="font-size: 14px; margin: 0px">
+            Ratings System Update
+           </p>
+           <span class="time">
+            (2022-12-20 00:00:00)
+           </span>
+          </div>
+          <small>
+           This is the difference due to changing the rating system.
+          </small>
+          <small>
+           This graph is not updated after 20th Dec 2022.
+          </small>
+          <a href="https://discuss.codechef.com/t/rating-system-update/104510">
+           Know more
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="ml-10" id="cumulative-old-graph">
+       </div>
+      </section>
+      <!--#cumulative-->
+     </div>
+     <!--.tabs-content-->
+    </section>
+    <!--.rating-graphs-->
+    <section class="rating-data-section distribution" style="position:relative; bottom:25px;">
+     <h3>
+      CodeChef Rating Distribution
+     </h3>
+     <div class="content" style="height: 320px;">
+      <div id="distribution-graph">
+      </div>
+     </div>
+    </section>
+    <!--.distribution-->
+    <section class="rating-data-section submissions" style="position: relative;">
+     <h3>
+      Submissions
+     </h3>
+     <div class="content">
+      <div id="submissions-graph">
+      </div>
+     </div>
+    </section>
+    <!--.submissions-->
+    <section class="rating-data-section problems-solved">
+     <h3>
+      Problems Solved
+     </h3>
+     <div class="content">
+      <h5>
+       Fully Solved (80)
+      </h5>
+      <article>
+       <p>
+        <strong>
+         Practice:
+        </strong>
+        <span>
+         <a href="/status/FLOW001?usernames=raasin" rel="nofollow">
+          FLOW001
+         </a>
+         ,
+         <a href="/status/CHEFGAMES?usernames=raasin" rel="nofollow">
+          CHEFGAMES
+         </a>
+         ,
+         <a href="/status/CWIREFRAME?usernames=raasin" rel="nofollow">
+          CWIREFRAME
+         </a>
+         ,
+         <a href="/status/NEARESTEXIT?usernames=raasin" rel="nofollow">
+          NEARESTEXIT
+         </a>
+         ,
+         <a href="/status/BOBBANK?usernames=raasin" rel="nofollow">
+          BOBBANK
+         </a>
+         ,
+         <a href="/status/CHAIRS_?usernames=raasin" rel="nofollow">
+          CHAIRS_
+         </a>
+         ,
+         <a href="/status/MAXEXP?usernames=raasin" rel="nofollow">
+          MAXEXP
+         </a>
+         ,
+         <a href="/status/START01?usernames=raasin" rel="nofollow">
+          START01
+         </a>
+         ,
+         <a href="/status/GDTURN?usernames=raasin" rel="nofollow">
+          GDTURN
+         </a>
+         ,
+         <a href="/status/AGELIMIT?usernames=raasin" rel="nofollow">
+          AGELIMIT
+         </a>
+         ,
+         <a href="/status/SQUATS?usernames=raasin" rel="nofollow">
+          SQUATS
+         </a>
+         ,
+         <a href="/status/TAXSAVING?usernames=raasin" rel="nofollow">
+          TAXSAVING
+         </a>
+         ,
+         <a href="/status/WATERCONS?usernames=raasin" rel="nofollow">
+          WATERCONS
+         </a>
+         ,
+         <a href="/status/TOP10?usernames=raasin" rel="nofollow">
+          TOP10
+         </a>
+         ,
+         <a href="/status/BIRYANI?usernames=raasin" rel="nofollow">
+          BIRYANI
+         </a>
+         ,
+         <a href="/status/FIT?usernames=raasin" rel="nofollow">
+          FIT
+         </a>
+         ,
+         <a href="/status/LUDO?usernames=raasin" rel="nofollow">
+          LUDO
+         </a>
+         ,
+         <a href="/status/BURGERS?usernames=raasin" rel="nofollow">
+          BURGERS
+         </a>
+         ,
+         <a href="/status/PRACLIST?usernames=raasin" rel="nofollow">
+          PRACLIST
+         </a>
+         ,
+         <a href="/status/HP18?usernames=raasin" rel="nofollow">
+          HP18
+         </a>
+         ,
+         <a href="/status/ADVANCE?usernames=raasin" rel="nofollow">
+          ADVANCE
+         </a>
+         ,
+         <a href="/status/AVGPROBLEM?usernames=raasin" rel="nofollow">
+          AVGPROBLEM
+         </a>
+         ,
+         <a href="/status/SUBSCRIBE_?usernames=raasin" rel="nofollow">
+          SUBSCRIBE_
+         </a>
+         ,
+         <a href="/status/EQDIFFER?usernames=raasin" rel="nofollow">
+          EQDIFFER
+         </a>
+         ,
+         <a href="/status/FSQRT?usernames=raasin" rel="nofollow">
+          FSQRT
+         </a>
+         ,
+         <a href="/status/CHEFAPPS?usernames=raasin" rel="nofollow">
+          CHEFAPPS
+         </a>
+         ,
+         <a href="/status/CHEFEREN?usernames=raasin" rel="nofollow">
+          CHEFEREN
+         </a>
+         ,
+         <a href="/status/MINCOINS?usernames=raasin" rel="nofollow">
+          MINCOINS
+         </a>
+         ,
+         <a href="/status/PRESENTS?usernames=raasin" rel="nofollow">
+          PRESENTS
+         </a>
+         ,
+         <a href="/status/DONDRIVE?usernames=raasin" rel="nofollow">
+          DONDRIVE
+         </a>
+         ,
+         <a href="/status/EXUNB?usernames=raasin" rel="nofollow">
+          EXUNB
+         </a>
+         ,
+         <a href="/status/RCBPLAY?usernames=raasin" rel="nofollow">
+          RCBPLAY
+         </a>
+         ,
+         <a href="/status/BIN_BAT?usernames=raasin" rel="nofollow">
+          BIN_BAT
+         </a>
+         ,
+         <a href="/status/WATERCOOLER2?usernames=raasin" rel="nofollow">
+          WATERCOOLER2
+         </a>
+         ,
+         <a href="/status/KITCHENTIME?usernames=raasin" rel="nofollow">
+          KITCHENTIME
+         </a>
+         ,
+         <a href="/status/IPLTRSH?usernames=raasin" rel="nofollow">
+          IPLTRSH
+         </a>
+         ,
+         <a href="/status/AUDIBLE?usernames=raasin" rel="nofollow">
+          AUDIBLE
+         </a>
+         ,
+         <a href="/status/TALLER?usernames=raasin" rel="nofollow">
+          TALLER
+         </a>
+         ,
+         <a href="/status/REACHTARGET?usernames=raasin" rel="nofollow">
+          REACHTARGET
+         </a>
+         ,
+         <a href="/status/KNGTOR?usernames=raasin" rel="nofollow">
+          KNGTOR
+         </a>
+         ,
+         <a href="/status/MILEAGE?usernames=raasin" rel="nofollow">
+          MILEAGE
+         </a>
+         ,
+         <a href="/status/MIXTURE?usernames=raasin" rel="nofollow">
+          MIXTURE
+         </a>
+         ,
+         <a href="/status/BULBLIFE?usernames=raasin" rel="nofollow">
+          BULBLIFE
+         </a>
+         ,
+         <a href="/status/RIP2000?usernames=raasin" rel="nofollow">
+          RIP2000
+         </a>
+         ,
+         <a href="/status/EQUALISE?usernames=raasin" rel="nofollow">
+          EQUALISE
+         </a>
+         ,
+         <a href="/status/MINHEIGHT?usernames=raasin" rel="nofollow">
+          MINHEIGHT
+         </a>
+         ,
+         <a href="/status/CANDIVIDE?usernames=raasin" rel="nofollow">
+          CANDIVIDE
+         </a>
+         ,
+         <a href="/status/BESTOFTWO?usernames=raasin" rel="nofollow">
+          BESTOFTWO
+         </a>
+         ,
+         <a href="/status/INSTAGRAM?usernames=raasin" rel="nofollow">
+          INSTAGRAM
+         </a>
+         ,
+         <a href="/status/INCRIQ?usernames=raasin" rel="nofollow">
+          INCRIQ
+         </a>
+         ,
+         <a href="/status/MONOPOLY2?usernames=raasin" rel="nofollow">
+          MONOPOLY2
+         </a>
+         ,
+         <a href="/status/CHEFPAGES?usernames=raasin" rel="nofollow">
+          CHEFPAGES
+         </a>
+         ,
+         <a href="/status/CARCHOICE?usernames=raasin" rel="nofollow">
+          CARCHOICE
+         </a>
+         ,
+         <a href="/status/UTKPLC?usernames=raasin" rel="nofollow">
+          UTKPLC
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         LP1TO201:
+        </strong>
+        <span>
+         <a href="/LP1TO201/status/CHFRICH?usernames=raasin" rel="nofollow">
+          CHFRICH
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         START57D:
+        </strong>
+        <span>
+         <a href="/START57D/status/MARKSTW?usernames=raasin" rel="nofollow">
+          MARKSTW
+         </a>
+         ,
+         <a href="/START57D/status/SUMNEQ?usernames=raasin" rel="nofollow">
+          SUMNEQ
+         </a>
+         ,
+         <a href="/START57D/status/NONNEGPROD?usernames=raasin" rel="nofollow">
+          NONNEGPROD
+         </a>
+         ,
+         <a href="/START57D/status/TWODIFFPALIN?usernames=raasin" rel="nofollow">
+          TWODIFFPALIN
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         START60D:
+        </strong>
+        <span>
+         <a href="/START60D/status/TAXES?usernames=raasin" rel="nofollow">
+          TAXES
+         </a>
+         ,
+         <a href="/START60D/status/EXPERT?usernames=raasin" rel="nofollow">
+          EXPERT
+         </a>
+         ,
+         <a href="/START60D/status/REMOVECARDS?usernames=raasin" rel="nofollow">
+          REMOVECARDS
+         </a>
+         ,
+         <a href="/START60D/status/CUTPAPER?usernames=raasin" rel="nofollow">
+          CUTPAPER
+         </a>
+         ,
+         <a href="/START60D/status/FLIPPAL?usernames=raasin" rel="nofollow">
+          FLIPPAL
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         START61D:
+        </strong>
+        <span>
+         <a href="/START61D/status/TIMELY?usernames=raasin" rel="nofollow">
+          TIMELY
+         </a>
+         ,
+         <a href="/START61D/status/ODDSUMPAIR?usernames=raasin" rel="nofollow">
+          ODDSUMPAIR
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         START62D:
+        </strong>
+        <span>
+         <a href="/START62D/status/MAXDIFFMIN?usernames=raasin" rel="nofollow">
+          MAXDIFFMIN
+         </a>
+         ,
+         <a href="/START62D/status/CHEFSCORE?usernames=raasin" rel="nofollow">
+          CHEFSCORE
+         </a>
+         ,
+         <a href="/START62D/status/XJUMP?usernames=raasin" rel="nofollow">
+          XJUMP
+         </a>
+         ,
+         <a href="/START62D/status/FINALSUM?usernames=raasin" rel="nofollow">
+          FINALSUM
+         </a>
+         ,
+         <a href="/START62D/status/MAKEMULTIPLE?usernames=raasin" rel="nofollow">
+          MAKEMULTIPLE
+         </a>
+         ,
+         <a href="/START62D/status/SSUBSTR?usernames=raasin" rel="nofollow">
+          SSUBSTR
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         START63D:
+        </strong>
+        <span>
+         <a href="/START63D/status/TASTEDEC?usernames=raasin" rel="nofollow">
+          TASTEDEC
+         </a>
+         ,
+         <a href="/START63D/status/BOOKPACK?usernames=raasin" rel="nofollow">
+          BOOKPACK
+         </a>
+         ,
+         <a href="/START63D/status/AVDSQUARPLZ?usernames=raasin" rel="nofollow">
+          AVDSQUARPLZ
+         </a>
+         ,
+         <a href="/START63D/status/DELXORONE?usernames=raasin" rel="nofollow">
+          DELXORONE
+         </a>
+        </span>
+       </p>
+       <p>
+        <strong>
+         START66C:
+        </strong>
+        <span>
+         <a href="/START66C/status/MONOPOLY?usernames=raasin" rel="nofollow">
+          MONOPOLY
+         </a>
+         ,
+         <a href="/START66C/status/BIN_BAT?usernames=raasin" rel="nofollow">
+          BIN_BAT
+         </a>
+         ,
+         <a href="/START66C/status/MOBKUN?usernames=raasin" rel="nofollow">
+          MOBKUN
+         </a>
+         ,
+         <a href="/START66C/status/GOODBINSTR?usernames=raasin" rel="nofollow">
+          GOODBINSTR
+         </a>
+         ,
+         <a href="/START66C/status/SPLITPAL?usernames=raasin" rel="nofollow">
+          SPLITPAL
+         </a>
+        </span>
+       </p>
+      </article>
+      <h5>
+       Partially Solved (0)
+      </h5>
+      <article>
+       <p>
+        <strong>
+         Practice:
+        </strong>
+        <span>
+         <a href="/status/IRSTXOR?usernames=raasin" rel="nofollow">
+          IRSTXOR
+         </a>
+        </span>
+       </p>
+       <!--.content-->
+      </article>
+     </div>
+    </section>
+    <!--.problems-solved-->
+    <section class="rating-data-section problems-solved">
+     <h3>
+      Contributions
+     </h3>
+     <div class="content">
+      <h5 class="collapse">
+       Problems Authored (0)
+      </h5>
+      <p class="collapse-content">
+       No Contribution
+      </p>
+      <h5 class="collapse">
+       Problems Tested (0)
+      </h5>
+      <p class="collapse-content">
+       No Contribution
+      </p>
+      <h5 class="collapse">
+       Editorials Contributed (0)
+      </h5>
+      <p class="collapse-content">
+       No Contribution
+      </p>
+     </div>
+    </section>
+    <script type="text/x-handlebars">
+     {{outlet}}
+                    {{bs-growl-notifications showTime="2500"}}
+    </script>
+    <script id="sets" type="text/x-handlebars">
+     <div>
+                        <a class="user-add"></a>
+                        {{#view App.BoxView}}
+
+                            <div class="add-button-set">
+                                <table id="test" border="0" cellpadding="0" cellspacing="0" style="padding:3px 10px;">
+                                    <tbody>
+                                    {{#if error}}
+                                        <tr>
+                                            <td colspan="3" style="text-align: center;">
+                                                <button class="ns-button" {{action fetchSets}}>Retry</button>
+                                            </td>
+                                        </tr>
+                                    {{else}}
+                                        {{#each model}}
+                                            {{#if isAdded}}
+                                                <tr {{action 'deleteMember' this }} title="Click to remove">
+                                                    <td style="width:10px; padding:5px 0 0;">
+                                                        <div class="ns-checkbox">
+                                                            <input type="checkbox" name="checkbox" checked/>
+                                                            <label></label>
+                                                        </div>
+                                                    </td>
+                                                    <td style="padding-left: 6px;">{{set_name}}</td>
+                                                    <td class="memberscount">{{membersCount}}</td>
+                                                </tr>
+                                            {{else}}
+                                                <tr {{action 'addMember' this }} title="Click to add">
+                                                    <td style="width:10px; padding:5px 0 0;">
+                                                        <div class="ns-checkbox">
+                                                            <input type="checkbox" name="checkbox"/>
+                                                            <label></label>
+                                                        </div>
+                                                    </td>
+                                                    <td style="padding-left: 6px;">{{set_name}}</td>
+                                                    <td class="memberscount">{{membersCount}}</td>
+                                                </tr>
+                                            {{/if}}
+                                        {{/each}}
+                                        <tr>
+                                            <td style="width:10px; padding:5px 0 0;"></td>
+                                            <td colspan="2"><a href="/sets" target="_blank">Create new set</a></td>
+                                        </tr>
+                                    {{/if}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {{/view}}
+                    </div>
+    </script>
+   </div>
+   <!--.user-details-container-->
+  </div>
+  <!--.small-8.columns-->
+  <aside class="sidebar small-4 columns pr0">
+   <div class="widget pl0 pr0 widget-rating">
+    <div class="content">
+     <div class="rating-header text-center">
+      <div class="rating-number">
+       1507
+      </div>
+      <div>
+       (Div 3)
+      </div>
+      <div class="rating-star">
+       <span style="background-color:#1E7D22">
+        ★
+       </span>
+       <span style="background-color:#1E7D22">
+        ★
+       </span>
+      </div>
+      <a href="/ratings">
+       <strong>
+        CodeChef Rating
+       </strong>
+      </a>
+      <small>
+       (Highest Rating 1507)
+      </small>
+     </div>
+     <!--rating-header-->
+     <div class="rating-ranks">
+      <ul class="inline-list">
+       <li>
+        <a href="/ratings/all">
+         <strong>
+          34189
+         </strong>
+        </a>
+        Global Rank
+       </li>
+       <li>
+        <a href="/ratings/all?filterBy=Country%3DIndia">
+         <strong>
+          30909
+         </strong>
+        </a>
+        Country Rank
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="widget pl0 pr0 widget-rating">
+    <div class="content">
+     <h4>
+      Games Rating
+     </h4>
+     <div class="games-rating-boxes">
+      <div class="games-rating-box">
+       <div class="games-rating-box-head">
+        <a class="games-rating-box-head-text" href="/games/?tab=1v1">
+         1v1 Rating
+        </a>
+       </div>
+       <div class="games-rating-box-body-unrated">
+        <p class="games-rating-box-body-text">
+         Unrated
+        </p>
+       </div>
+      </div>
+      <div class="games-rating-box">
+       <div class="games-rating-box-head">
+        <a class="games-rating-box-head-text" href="/games/?tab=puzzle">
+         Puzzle Rating
+        </a>
+       </div>
+       <div class="games-rating-box-body">
+        <p class="games-rating-box-body-text">
+         637
+        </p>
+        <div class="games-rating-box-body-text-change">
+         <span>
+          -163
+         </span>
+         <img alt="rating change" src="https://cdn.codechef.com/images/icons/down-arrow.svg">
+         </img>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="games-profile-link-container">
+      <a class="games-profile-link" href="/games/profile/raasin" rel="noopener noreferrer" target="_blank">
+       Go to Games Profile
+       <div class="games-profile-link-icon-container">
+        <div class="games-profile-link-icon">
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="widget badges">
+    <h4>
+     Badges
+    </h4>
+    <div class="badge">
+     <div class="badge__image">
+      <img alt="Contest Contender - Bronze Badge" src="https://cdn.codechef.com/images/badges/contest/bronze.svg">
+      </img>
+     </div>
+     <div>
+      <p class="badge__title">
+       Contest Contender - Bronze Badge
+      </p>
+      <p class="badge__description">
+       Received for participating in
+       <span class="badge__goal">
+        5
+       </span>
+       Contests
+      </p>
+     </div>
+    </div>
+    <div class="badge">
+     <div class="badge__image">
+      <img alt="Problem Solver - Bronze Badge" src="https://cdn.codechef.com/images/badges/problem/bronze.svg"/>
+     </div>
+     <div>
+      <p class="badge__title">
+       Problem Solver - Bronze Badge
+      </p>
+      <p class="badge__description">
+       Received for solving
+       <span class="badge__goal">
+        50
+       </span>
+       Problems
+      </p>
+     </div>
+    </div>
+    <div class="badge">
+     <div class="badge__image">
+      <img alt="Daily Streak - Silver Badge" src="https://cdn.codechef.com/images/badges/streak/silver.svg"/>
+     </div>
+     <div>
+      <p class="badge__title">
+       Daily Streak - Silver Badge
+      </p>
+      <p class="badge__description">
+       Received for maintaining a streak of
+       <span class="badge__goal">
+        25
+       </span>
+       days
+      </p>
+     </div>
+    </div>
+   </div>
+   <!--to be shown only if it is school student-->
+   <div class="widget recent-activity">
+    <h4>
+     Recent Activity
+    </h4>
+    <div class="table-questions content" id="rankContentDiv">
+     <p align="center">
+      <img src="https://cdn.codechef.com/sites/all/themes/abessive/images/ajax-loader.gif"/>
+      Fetching recent
+                            activity
+     </p>
+     <input id="user_handle" name="user_handle" type="hidden" value="raasin"/>
+     <script type="text/javascript">
+      onload_getpage_recent_activity_user('next');
+     </script>
+    </div>
+   </div>
+  </aside>
+  <!--.sidebar-->
+ </div>
+</div>
