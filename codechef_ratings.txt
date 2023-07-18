@@ -1,0 +1,3 @@
+Rating: 1507
+Highest Rating: 1507
+Fully Solved: 80

@@ -1,4 +1,5 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 
 # URL of the CodeChef profile page
@@ -12,24 +13,17 @@ if response.status_code == 200:
     # Create a BeautifulSoup object from the response content
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    # Find the streak section
-    streak_section = soup.find('div', class_='user-profile-container')
-    if streak_section:
-        # Save the streak section to a text file
-        with open('streak_section.html', 'w', encoding='utf-8') as file:
-            file.write(streak_section.prettify())
-        print("Streak section saved to 'streak_section.html' file.")
+    # Find the fully solved number element
+    fully_solved_element = soup.find('h5', text=re.compile(r'Fully Solved \(\d+\)'))
+    if fully_solved_element:
+        fully_solved = re.search(r'Fully Solved \((\d+)\)', fully_solved_element.text).group(1)
+        print("Fully Solved:", fully_solved)
     else:
-        print("Streak information section not found on the page.")
+        print("Fully solved information not found on the page.")
 
-    # Find the problems section
-    problems_section = soup.find('div', class_='user-profile-container')
-    if problems_section:
-        # Save the problems section to a text file
-        with open('problems_section.html', 'w', encoding='utf-8') as file:
-            file.write(problems_section.prettify())
-        print("Problems section saved to 'problems_section.html' file.")
-    else:
-        print("Problems solved section not found on the page.")
+    # Save the fully solved information to the existing text file
+    with open('codechef_ratings.txt', 'a', encoding='utf-8') as file:
+        file.write("Fully Solved: " + fully_solved + "\n")
+    print("Fully solved information added to 'codechef_ratings.txt' file.")
 else:
     print("Failed to retrieve data from CodeChef.")
