@@ -1,33 +1,33 @@
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+import requests
+from bs4 import BeautifulSoup
 
-# Set up Firefox WebDriver
-options = Options()
-options.add_argument('-headless')
-driver = webdriver.Firefox(options=options)
+# URL of the CodeChef profile page
+url = 'https://www.codechef.com/users/raasin'
 
-# CodeChef URL
-url = "https://www.codechef.com/users/raasin"
+# Send a GET request to the URL
+response = requests.get(url)
 
-# Open the URL
-driver.get(url)
+# Check if the request was successful
+if response.status_code == 200:
+    # Create a BeautifulSoup object from the response content
+    soup = BeautifulSoup(response.content, 'html.parser')
 
-# Wait for the streak element to be visible
-streak_element = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//span[@class="badge__progress"]')))
+    # Find the streak element by searching for the 'Streak' label
+    streak_label = soup.find('b', text='Streak:')
+    if streak_label:
+        # Extract the streak value from the following sibling element
+        streak = streak_label.next_sibling.strip()
+        print("Streak:", streak)
+    else:
+        print("Streak information not found on the page.")
 
-# Scrape the streak
-streak = streak_element.text
-print("Streak:", streak)
-
-# Wait for the problems solved element to be visible
-problems_solved_element = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//span[@class="badge__progress"]')))
-
-# Scrape the problems solved
-problems_solved = problems_solved_element.text
-print("Problems Solved:", problems_solved)
-
-# Quit the WebDriver
-driver.quit()
+    # Find the problems solved element by searching for the 'Problems Solved' label
+    problems_label = soup.find('b', text='Problems Solved:')
+    if problems_label:
+        # Extract the problems solved value from the following sibling element
+        problems_solved = problems_label.next_sibling.strip()
+        print("Problems Solved:", problems_solved)
+    else:
+        print("Problems solved information not found on the page.")
+else:
+    print("Failed to retrieve data from CodeChef.")
