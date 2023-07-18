@@ -3,35 +3,24 @@ import re
 from bs4 import BeautifulSoup
 import time
 
-# URL of the CodeChef profile page
 url = 'https://www.codechef.com/users/raasin'
 
 while True:
-    # Send a GET request to the URL
     response = requests.get(url)
-
-    # Check if the request was successful
     if response.status_code == 200:
-        # Create a BeautifulSoup object from the response content
         soup = BeautifulSoup(response.content, 'html.parser')
-
-        # Find the rating element
         rating_element = soup.find('div', class_='rating-number')
         if rating_element:
             rating = rating_element.get_text().strip()
             print("Rating:", rating)
         else:
             print("Rating information not found on the page.")
-        
-        # Find the fully solved number element
         fully_solved_element = soup.find('h5', text=re.compile(r'Fully Solved \(\d+\)'))
         if fully_solved_element:
             fully_solved = re.search(r'Fully Solved \((\d+)\)', fully_solved_element.text).group(1)
             print("Fully Solved:", fully_solved)
         else:
             print("Fully solved information not found on the page.")
-
-        # Find the highest rating element using regular expression pattern
         highest_rating_element = soup.find('small', text=re.compile(r'Highest Rating \d+'))
         if highest_rating_element:
             highest_rating = re.search(r'Highest Rating (\d+)', highest_rating_element.text).group(1)
@@ -39,7 +28,6 @@ while True:
         else:
             print("Highest rating information not found on the page.")
         
-        # Update the existing HTML file with the extracted data
         with open('codechef.html', 'r', encoding='utf-8') as file:
             html_content = file.read()
         soup = BeautifulSoup(html_content, 'html.parser')
@@ -51,8 +39,8 @@ while True:
             highest_rating_text = highest_rating_element.find('text')
             problems_solved_text = problems_solved.find('text')
             if current_rating_text and highest_rating_text and problems_solved_text:
-                current_rating_text.string = rating  # Replace with the extracted current rating
-                highest_rating_text.string = highest_rating  # Replace with the extracted highest rating
+                current_rating_text.string = rating  
+                highest_rating_text.string = highest_rating  
                 problems_solved_text.string = fully_solved
 
         with open('codechef.html', 'w', encoding='utf-8') as file:
@@ -61,5 +49,4 @@ while True:
     else:
         print("Failed to retrieve data from CodeChef.")
 
-    # Wait for 20 seconds before re-running the code
     time.sleep(20)
