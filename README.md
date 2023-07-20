@@ -76,7 +76,8 @@ The Pdashboard utilizes web scraping techniques to fetch data from GitHub and Co
             highest_rating = re.search(r'Highest Rating (\d+)', highest_rating_element.text).group(1)
             print("Highest Rating:", highest_rating)
         else:
-            print("Highest rating information not found on the page.")```
+            print("Highest rating information not found on the page.")
+```
 
 ## Future Plans
 
