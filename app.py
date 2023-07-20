@@ -123,4 +123,4 @@ if __name__ == "__main__":
     background_thread.start()
 
     # Run the Flask app
-    app.run(debug=True)
+    app.run()
