@@ -1,7 +1,7 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-from flask import Flask
+from flask import Flask, render_template
 import threading
 import time
 
@@ -115,8 +115,7 @@ def update_data():
 @app.route('/')
 def dashboard():
     # Render your dashboard HTML here
-    with open('index.html', 'r', encoding='utf-8') as file:
-        return file.read()
+    return render_template('index.html')
 
 if __name__ == "__main__":
     # Start a background thread to update the data periodically
