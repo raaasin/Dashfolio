@@ -9,6 +9,8 @@ You can access the live version of the Pdashboard at [https://nisar-dashboard.on
 - `templates/`: This folder consists of the HTML files for the dashboard interface - `index.html`, `codechef.html`, and `github.html`.
 - `app.py`: This Python file contains the Flask application and handles the web scraping for GitHub and CodeChef data.
 - `README.md`: The file you are currently reading, providing an overview of the project.
+- `render.yaml`: This file is used inorder to deploy the project in the server or for virtual env.
+- `Dashboard.png`: I've uploaded the screenshot for you to take a look incase the website goes down.
 - `requirements.txt`: A list of Python dependencies required to run the application.
 
 ## Usage
