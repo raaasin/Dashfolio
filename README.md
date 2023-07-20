@@ -94,7 +94,3 @@ Feel free to customize and enhance the project further as per your requirements.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-Remember to replace `screenshot_github.png` and `screenshot_codechef.png` with actual screenshots showcasing your dashboard in action.
-
-With this README, users will have a comprehensive understanding of your project, how to set it up, the web scraping functionalities used, and your future plans for further development.
