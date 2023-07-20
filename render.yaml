@@ -1,0 +1,6 @@
+# render.yaml
+version: 1
+services:
+  - name: nisar-dashboard
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
