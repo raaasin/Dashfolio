@@ -32,7 +32,7 @@ def codechef():
         else:
             print("Highest rating information not found on the page.")
 
-        with open('codechef.html', 'r', encoding='utf-8') as file:
+        with open('templates/codechef.html', 'r', encoding='utf-8') as file:
             html_content = file.read()
         soup = BeautifulSoup(html_content, 'html.parser')
         current_rating_element = soup.find('g', transform='translate(247.5,48)')
@@ -47,7 +47,7 @@ def codechef():
                 highest_rating_text.string = highest_rating
                 problems_solved_text.string = fully_solved
 
-        with open('codechef.html', 'w', encoding='utf-8') as file:
+        with open('templates/codechef.html', 'w', encoding='utf-8') as file:
             file.write(soup.prettify())
 
     else:
@@ -79,7 +79,7 @@ def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestra
         else:
             print('Failed to retrieve data from GitHub.')
 
-        with open('github.html', 'r', encoding='utf-8') as file:
+        with open('templates/github.html', 'r', encoding='utf-8') as file:
             html_content = file.read()
         soup = BeautifulSoup(html_content, 'html.parser')
         totalcontrib_element = soup.find('g', transform='translate(82.5,48)')
@@ -100,7 +100,7 @@ def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestra
                 longeststreak_text.string = longeststreak
                 longestrange_text.string = longestrange
 
-        with open('github.html', 'w', encoding='utf-8') as file:
+        with open('templates/github.html', 'w', encoding='utf-8') as file:
             file.write(soup.prettify())
 
     else:
