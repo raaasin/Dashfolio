@@ -30,18 +30,18 @@ The Pdashboard utilizes web scraping techniques to fetch data from GitHub and Co
 
 ### GitHub Web Scraping
 
-```python
+
 def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestrange):
     # Your GitHub web scraping code goes here
     # ...
 
 # Example usage:
 gitupdate(totalcontrib=0, currentstreak=0, streakrange=0, longeststreak=0, longestrange=0)  # Provide actual values here
-```
+
 
 ### CodeChef Web Scraping
 
-```python
+
 def codechef():
     # Your CodeChef web scraping code goes here
     # ...
