@@ -49,7 +49,7 @@ def codechef():
     else:
         print("Failed to retrieve data from CodeChef.")
 def gitupdate(totalcontrib,currentstreak,streakrange,longeststreak,longestrange):
-    with open('codechef.html', 'r', encoding='utf-8') as file:
+    with open('github.html', 'r', encoding='utf-8') as file:
         html_content = file.read()
     soup = BeautifulSoup(html_content, 'html.parser')
     totalcontrib_element = soup.find('g', transform='translate(82.5,48)')
@@ -70,7 +70,7 @@ def gitupdate(totalcontrib,currentstreak,streakrange,longeststreak,longestrange)
                 longeststreak_text.string = longeststreak
                 longestrange_text.string = longestrange
 
-    with open('codechef.html', 'w', encoding='utf-8') as file:
+    with open('github.html', 'w', encoding='utf-8') as file:
         file.write(soup.prettify())
 
 def github():
