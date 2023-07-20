@@ -48,6 +48,31 @@ def codechef():
 
     else:
         print("Failed to retrieve data from CodeChef.")
+def gitupdate(totalcontrib,currentstreak,streakrange,longeststreak,longestrange):
+    with open('codechef.html', 'r', encoding='utf-8') as file:
+        html_content = file.read()
+    soup = BeautifulSoup(html_content, 'html.parser')
+    totalcontrib_element = soup.find('g', transform='translate(82.5,48)')
+    currentstreak_element = soup.find('g', transform='translate(247.5,48)')
+    streakrange_element = soup.find('g', transform='translate(247.5,145)')
+    longeststreak_element = soup.find('g', transform='translate(412.5,48)')
+    longestrange_element = soup.find('g', transform='translate(412.5,114)')
+    if totalcontrib_element and currentstreak_element and streakrange_element and longeststreak_element and longestrange_element:
+            totalcontrib_text = totalcontrib_element.find('text')
+            currentstreak_text = currentstreak_element.find('text')
+            streakrange_text = streakrange_element.find('text')
+            longeststreak_text = longeststreak_element.find('text')
+            longestrange_text = longestrange_element.find('text')
+            if totalcontrib_text and currentstreak_text and streakrange_text and longeststreak_text and longestrange_text:
+                totalcontrib_text.string = totalcontrib 
+                currentstreak_text.string = currentstreak  
+                streakrange_text.string = streakrange
+                longeststreak_text.string = longeststreak
+                longestrange_text.string = longestrange
+
+    with open('codechef.html', 'w', encoding='utf-8') as file:
+        file.write(soup.prettify())
+
 def github():
     response = requests.get(url)
     if response.status_code == 200:
@@ -71,7 +96,8 @@ def github():
                     longestrange=lre.string
             else:
                  print('sad')
-    print(totalcontrib,currentstreak,streakrange,longeststreak,longestrange)
+    gitupdate(totalcontrib,currentstreak,streakrange,longeststreak,longestrange)
+
 
 while True:
     codechef()
