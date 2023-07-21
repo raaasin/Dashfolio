@@ -69,7 +69,40 @@
       animation: currstreak 0.6s linear forwards;
     }
 
-    
+    /* New styles for the certificates carousel */
+
+    .certificate-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .certificate-carousel {
+      display: flex;
+      overflow: hidden;
+      width: 300px;
+      height: 200px;
+      border: 1px solid #E4E2E2;
+      border-radius: 5px;
+    }
+
+    .certificate-carousel img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-btn {
+      cursor: pointer;
+      padding: 5px;
+      font-size: 24px;
+      color: #BF91F3;
+    }
+
+    .carousel-btn:hover {
+      color: #70A5FD;
+    }
   </style>
 </head>
 <body>
@@ -78,23 +111,33 @@
     <div class="widget">
       <h3>Github</h3>
       <div class="streak-container">
-        <div class="streak-bg"></div>
-        <div class="streak-content">
-          {% include 'github.html' %}
+        <!-- GitHub streak content goes here (will be added later) -->
+      </div>
+      <div class="certificate-container">
+        <div class="carousel-btn" onclick="prevCertificate(this, 'github')">&lt;</div>
+        <div class="certificate-carousel" id="github-carousel">
+          <!-- Certificate images will be added here -->
         </div>
+        <div class="carousel-btn" onclick="nextCertificate(this, 'github')">&gt;</div>
       </div>
     </div>
     <div class="widget">
       <h3>CodeChef</h3>
       <div class="streak-container">
-        <div class="streak-bg"></div>
-        <div class="streak-content">
-          {% include 'codechef.html' %}
-
-          <div>
+        <!-- CodeChef streak content goes here (will be added later) -->
+      </div>
+      <div class="certificate-container">
+        <div class="carousel-btn" onclick="prevCertificate(this, 'codechef')">&lt;</div>
+        <div class="certificate-carousel" id="codechef-carousel">
+          <!-- Certificate images will be added here -->
         </div>
+        <div class="carousel-btn" onclick="nextCertificate(this, 'codechef')">&gt;</div>
       </div>
     </div>
   </div>
+
+  <script>
+    // JavaScript functions will be added here later
+  </script>
 </body>
 </html>
