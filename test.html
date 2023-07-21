@@ -117,6 +117,8 @@
         <div class="carousel-btn" onclick="prevCertificate(this, 'github')">&lt;</div>
         <div class="certificate-carousel" id="github-carousel">
           <!-- Certificate images will be added here -->
+          <img src="Dashboard.png" alt="Certificate 1">
+          <img src="certificate1.jpg" alt="Certificate 2">
         </div>
         <div class="carousel-btn" onclick="nextCertificate(this, 'github')">&gt;</div>
       </div>
@@ -137,7 +139,17 @@
   </div>
 
   <script>
-    // JavaScript functions will be added here later
+    function prevCertificate(btn, containerId) {
+      const container = document.getElementById(containerId + "-carousel");
+      const imageWidth = container.querySelector("img").width;
+      container.scrollLeft -= imageWidth;
+    }
+
+    function nextCertificate(btn, containerId) {
+      const container = document.getElementById(containerId + "-carousel");
+      const imageWidth = container.querySelector("img").width;
+      container.scrollLeft += imageWidth;
+    }
   </script>
 </body>
 </html>
