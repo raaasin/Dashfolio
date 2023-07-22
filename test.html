@@ -80,11 +80,11 @@
 
     .certificate-carousel {
       display: flex;
-      overflow: hidden;
       width: 300px;
       height: 200px;
       border: 1px solid #E4E2E2;
       border-radius: 5px;
+      overflow: hidden;
     }
 
     .certificate-carousel img {
@@ -95,9 +95,13 @@
 
     .carousel-btn {
       cursor: pointer;
-      padding: 5px;
       font-size: 24px;
       color: #BF91F3;
+      padding: 5px 8px;
+      border: 1px solid #E4E2E2;
+      border-radius: 5px;
+      background-color: #1A1B27;
+      margin: 0 5px;
     }
 
     .carousel-btn:hover {
@@ -141,7 +145,7 @@
   </div>
 
   <script>
-    function prevCertificate(btn, containerId) {
+function prevCertificate(btn, containerId) {
       const container = document.getElementById(containerId + "-carousel");
       const imageWidth = container.querySelector("img").width;
       container.scrollLeft -= imageWidth;
@@ -150,7 +154,17 @@
     function nextCertificate(btn, containerId) {
       const container = document.getElementById(containerId + "-carousel");
       const imageWidth = container.querySelector("img").width;
-      container.scrollLeft += imageWidth;
+      const totalWidth = container.scrollWidth;
+      const currentScroll = container.scrollLeft;
+      const maxScroll = totalWidth - container.clientWidth;
+
+      if (currentScroll + container.clientWidth === totalWidth) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else if (currentScroll >= maxScroll) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollLeft += imageWidth;
+      }
     }
   </script>
 </body>
