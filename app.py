@@ -73,9 +73,9 @@ def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestra
             if tc and cs and sr and lse and lre:
                 totalcontrib = tc.string
                 currentstreak = cs.string
-                streakrange = sr.string
+                #streakrange = sr.string
                 longeststreak = lse.string
-                longestrange = lre.string
+                #longestrange = lre.string
         else:
             print('Failed to retrieve data from GitHub.')
 
