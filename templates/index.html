@@ -109,13 +109,28 @@
       height: 100%;
       background-color: #70A5FD;
     }
+    .widget a {
+      text-decoration: none; /* Remove underline */
+      color: #70A5FD; /* Set the link color */
+      cursor: pointer; /* Show pointer cursor on hover */
+      display: block; /* Make the entire area clickable */
+    }
+
+    /* Set the link styles for visited and hover states */
+    .widget a:visited {
+      color: #70A5FD;
+    }
+
+    .widget a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
   </style>
 </head>
 <body>
   <h1>Productivity Dashboard</h1>
   <div class="dashboard">
     <div class="widget">
-      <h3>Github</h3>
+      <h3><a href="https://github.com/raaasin" target="_blank">Github</a></h3>
       <div class="streak-container">
         <div class="streak-bg"></div>
         <div class="streak-content">
@@ -124,7 +139,7 @@
       </div>
     </div>
     <div class="widget">
-      <h3>CodeChef</h3>
+      <h3><a href="https://www.codechef.com/users/raasin" target="_blank">CodeChef</a></h3>
       <div class="streak-container">
         <div class="streak-bg"></div>
         <div class="streak-content">
