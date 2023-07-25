@@ -61,21 +61,16 @@ def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestra
         soup = BeautifulSoup(response.content, 'html.parser')
         total_contributions_element = soup.find('g', transform='translate(82.5,48)')
         current_streak = soup.find('g', transform='translate(247.5,48)')
-        streak_range = soup.find('g', transform='translate(247.5,145)')
         longest_streak_element = soup.find('g', transform='translate(412.5,48)')
-        longest_range_element = soup.find('g', transform='translate(412.5,114)')
-        if current_streak and streak_range and total_contributions_element and longest_range_element and longest_streak_element:
+        if current_streak and total_contributions_element and longest_streak_element:
             tc = total_contributions_element.find('text')
             cs = current_streak.find('text')
-            sr = streak_range.find('text')
             lse = longest_streak_element.find('text')
-            lre = longest_range_element.find('text')
-            if tc and cs and sr and lse and lre:
+            if tc and cs and lse:
                 totalcontrib = tc.string
                 currentstreak = cs.string
-                #streakrange = sr.string
                 longeststreak = lse.string
-                #longestrange = lre.string
+
         else:
             print('Failed to retrieve data from GitHub.')
 
@@ -84,21 +79,15 @@ def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestra
         soup = BeautifulSoup(html_content, 'html.parser')
         totalcontrib_element = soup.find('g', transform='translate(82.5,48)')
         currentstreak_element = soup.find('g', transform='translate(247.5,48)')
-        streakrange_element = soup.find('g', transform='translate(247.5,145)')
         longeststreak_element = soup.find('g', transform='translate(412.5,48)')
-        longestrange_element = soup.find('g', transform='translate(412.5,114)')
-        if totalcontrib_element and currentstreak_element and streakrange_element and longeststreak_element and longestrange_element:
+        if totalcontrib_element and currentstreak_element and longeststreak_element:
             totalcontrib_text = totalcontrib_element.find('text')
             currentstreak_text = currentstreak_element.find('text')
-            streakrange_text = streakrange_element.find('text')
             longeststreak_text = longeststreak_element.find('text')
-            longestrange_text = longestrange_element.find('text')
-            if totalcontrib_text and currentstreak_text and streakrange_text and longeststreak_text and longestrange_text:
+            if totalcontrib_text and currentstreak_text and longeststreak_text:
                 totalcontrib_text.string = totalcontrib
                 currentstreak_text.string = currentstreak
-                streakrange_text.string = streakrange
                 longeststreak_text.string = longeststreak
-                longestrange_text.string = longestrange
 
         with open('templates/github.html', 'w', encoding='utf-8') as file:
             file.write(soup.prettify())
