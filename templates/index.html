@@ -10,15 +10,38 @@
       color: #E4E2E2;
     }
     
-    h1 {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-weight: 700;
-      color: #38BDAE;
-    }
-    
+/* Default styles for h1 (for larger screens) */
+h1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: #70A5FD;
+  display: flex;
+}
+
+/* Media query for smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  h1 {
+    position: static; /* Remove fixed positioning */
+    transform: none; /* Remove the horizontal centering */
+    text-align: center; /* Center the text within its container */
+    font-size: 24px; /* Adjust the font size for responsiveness */
+    margin: 40px 0 20px; /* Add some margin for spacing between the merged navbars and the h1 */
+  }
+
+  /* Adjust widget width to fit smaller screens */
+  .widget {
+    width: 100%;
+  }
+
+  /* Adjust project and certification frame width to fit smaller screens */
+  .project-certification-frame {
+    width: 100%;
+  }
+}
+
     .dashboard {
       display: flex;
       flex-wrap: wrap; /* Added this to wrap the elements onto the next line */
