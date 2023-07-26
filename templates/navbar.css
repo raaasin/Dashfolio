@@ -11,39 +11,34 @@ body {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-
-  /* Adjust this value to control the gap between the navbars */
   }
   
-  .split-navbar:before {
+  .split-navbar::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    background-color: #1A1B27;
+    background: radial-gradient(circle at top right, #1A1B27 80%, transparent 100%);
     transform: skewX(-30deg);
     z-index: -1;
   }
   
-  .split-navbar:after {
+  .split-navbar::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 1000%;
+    width: 50%;
     height: 100%;
-    background-color: #1A1B27;
+    background: radial-gradient(circle at top left, #1A1B27 80%, transparent 100%);
     transform: skewX(30deg);
     z-index: -1;
   }
   
   /* Style for the left and right navbars */
-  .left-navbar{
-    width: 500px; /* Adjust this value to control the width of each navbar */
-    padding: 20px;
-  }
+  .left-navbar,
   .right-navbar {
     width: 500px; /* Adjust this value to control the width of each navbar */
     padding: 20px;
@@ -53,16 +48,25 @@ body {
   .left-navbar {
     background-color: #70A5FD;
     color: #E4E2E2;
-
   }
   
   .right-navbar {
     background-color: #BF91F3;
     color: #E4E2E2;
-
   }
   
-  /* Your existing CSS styles */
-  /* ... */
+  /* Sample navbar items with hover styles */
+  .left-navbar li,
+  .right-navbar li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+  }
   
+  .left-navbar li:hover,
+  .right-navbar li:hover {
+    background-color: #96CAFF; /* Adjust the hover background color as needed */
+  }
   
