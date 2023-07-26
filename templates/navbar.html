@@ -4,7 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Split Navbar</title>
-  <link rel="stylesheet" href="navbar.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    background-color: #1A1B27;
+    color: #E4E2E2;
+  }
+  
+  /* Box model with smooth edges for the split navbar */
+  .split-navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; /* Adjust the border-radius value for smoother or rounder edges */
+  }
+  
+  .split-navbar::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 70%;
+    background: radial-gradient(circle at top right, #1A1B27 80%, transparent 100%);
+    transform: skewX(-30deg);
+    border-radius: 0 0 10px 0; /* Adjust the top-right corner's border-radius to make it rounded */
+    z-index: -1;
+  }
+  
+  .split-navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 70%;
+    background: radial-gradient(circle at top left, #1A1B27 80%, transparent 100%);
+    transform: skewX(30deg);
+    border-radius: 0 0 0 10px; /* Adjust the top-left corner's border-radius to make it rounded */
+    z-index: -1;
+  }
+  
+  /* Style for the left and right navbars */
+  .left-navbar,
+  .right-navbar {
+    width: 400px; /* Adjust this value to control the width of each navbar */
+    padding: 10px;
+  }
+  
+  /* Sample styles for left and right navbars */
+  .left-navbar {
+    background-color: #70A5FD;
+    color: #E4E2E2;
+    border-bottom-right-radius: 20px; /* Rounded only the bottom-right corner of the left navbar */
+    text-align: right; /* Align the items on the right side */
+  }
+  
+  .right-navbar {
+    background-color: #BF91F3;
+    color: #E4E2E2;
+    border-bottom-left-radius: 20px; /* Rounded only the bottom-left corner of the right navbar */
+    text-align: left; /* Align the items on the left side */
+  }
+  
+  /* Sample navbar items with hover styles */
+  .left-navbar ul,
+  .right-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display the list items in a horizontal manner */
+    justify-content: flex-end; /* Align the items on the right side (left navbar) */
+  }
+  
+  .right-navbar ul {
+    justify-content: flex-start; /* Align the items on the left side (right navbar) */
+  }
+  
+  .left-navbar li,
+  .right-navbar li {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  
+  .left-navbar li:hover {
+    background-color: #83c0fc; /* Hover background color for left navbar */
+  }
+  
+  .right-navbar li:hover {
+    background-color: #d0a6ff; /* Hover background color for right navbar */
+  }
+  
+</style>
 </head>
 <body>
   <nav class="split-navbar">
