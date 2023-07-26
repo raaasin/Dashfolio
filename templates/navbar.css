@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #1A1B27;
+    color: #E4E2E2;
+  }
+  
+  /* Slant edges for the split navbar */
+  .split-navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 200px; /* Adjust this value to control the gap between the navbars */
+  }
+  
+  .split-navbar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #1A1B27;
+    transform: skewX(-30deg);
+    z-index: -1;
+  }
+  
+  .split-navbar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #1A1B27;
+    transform: skewX(30deg);
+    z-index: -1;
+  }
+  
+  /* Style for the left and right navbars */
+  .left-navbar,
+  .right-navbar {
+    width: calc(100% - 800px); /* Adjust this value to control the width of each navbar */
+    padding: 20px;
+  }
+  
+  /* Sample styles for left and right navbars */
+  .left-navbar {
+    background-color: #70A5FD;
+    color: #E4E2E2;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+  }
+  
+  .right-navbar {
+    background-color: #BF91F3;
+    color: #E4E2E2;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+  }
+  
+  /* Your existing CSS styles */
+  /* ... */
+  
+  
