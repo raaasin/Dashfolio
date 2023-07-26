@@ -11,10 +11,12 @@
     }
     
     h1 {
-      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
       font-weight: 700;
-      color: #BF91F3;
-      animation: currstreak 0.6s linear forwards;
+      color: #38BDAE;
     }
     
     .dashboard {
@@ -128,7 +130,7 @@
 </head>
 <body>
   <div>{% include 'navbar.html' %}</div>
-  <h1>Productivity Dashboard</h1>
+  <center><h1>Productivity Dashboard</h1></center>
   <div class="dashboard">
     <div class="widget">
       <h3><a href="https://github.com/raaasin" target="_blank">Github</a></h3>
