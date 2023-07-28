@@ -96,7 +96,12 @@
   .right-navbar li:hover {
     background-color: #d0a6ff; /* Hover background color for right navbar */
   }
-  
+  a {
+      text-decoration: none; /* Remove underline */
+      color: #E4E2E2; /* Set the link color */
+      cursor: pointer; /* Show pointer cursor on hover */
+      display: block; /* Make the entire area clickable */
+    }
 </style>
 </head>
 <body>
@@ -111,7 +116,7 @@
     <div class="right-navbar">
       <ul>
         <li>Projects</li>
-        <li>About</li>
+        <li><a href="personal.html">About</a></li>
         <li>Blog</li>
       </ul>
     </div>
