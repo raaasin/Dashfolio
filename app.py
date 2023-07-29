@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from flask import Flask, render_template
 import threading
 import time
+import os
 
 app = Flask(__name__)
 
@@ -115,15 +116,18 @@ def update_data():
         codechef()
         gitupdate(totalcontrib=0, currentstreak=0, streakrange=0, longeststreak=0, longestrange=0)  # Provide actual values here
         time.sleep(20)
-
+picfolder=os.path.join('static','pics')
+app.config['UPLOAD_FOLDER']=picfolder
 @app.route('/')
 def index():
     # Render your dashboard HTML here
-    return render_template('about.html')
+    me=os.path.join(app.config['UPLOAD_FOLDER'],'me.webp')
+    return render_template('about.html',user_image=me)
 @app.route('/about')
 def about():
     # Render your dashboard HTML here
-    return render_template('about.html')
+    me=os.path.join(app.config['UPLOAD_FOLDER'],'me.webp')
+    return render_template('about.html',user_image=me)
 @app.route('/productivity')
 def productivity():
     return render_template('productivity.html')
