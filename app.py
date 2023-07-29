@@ -117,13 +117,16 @@ def update_data():
         time.sleep(20)
 
 @app.route('/')
-def dashboard():
-    # Render your dashboard HTML here
-    return render_template('index.html')
-@app.route('/about')
-def dashboard():
+def index():
     # Render your dashboard HTML here
     return render_template('about.html')
+@app.route('/about')
+def about():
+    # Render your dashboard HTML here
+    return render_template('about.html')
+@app.route('/productivity')
+def productivity():
+    return render_template('productivity.html')
 if __name__ == "__main__":
     # Start a background thread to update the data periodically
     background_thread = threading.Thread(target=update_data)
