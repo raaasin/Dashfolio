@@ -9,6 +9,13 @@
       background-color: #1A1B27;
       color: #E4E2E2;
     }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap; /* Added this to wrap the elements onto the next line */
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+    
     
     /* Default styles for h1 (for larger screens) */
     h1 {
@@ -59,8 +66,8 @@
     
     .streak-container {
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: auto;
+      height: auto;
     }
     
     .streak-bg {
@@ -92,8 +99,8 @@
     position: absolute;
     top: -30%;
     left: -30%;
-    width: 160%;
-    height: 160%;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
     opacity: 0;
     transition: opacity 0.3s;
@@ -165,6 +172,15 @@
     .streak-content p{
       text-align: justify;
     }
+    @media screen and (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+
+    .widget {
+      width: 100%;
+    }
+  }
   </style>
 </head>
 <body>
@@ -177,19 +193,48 @@
       <div class="streak-container">
         <div class="streak-bg"></div>
         <div class="streak-content">
-          <img class="streak-image" id="shining-image" src="{{user_image}}" alt="Nisar Ahmed Md.">
+          
           <!-- Add your introduction here -->
-          <h3>Nisar Ahmed Mohammed</h3>
+          
+          <table>
+            <tr>
+              <td>
+                <img class="streak-image" id="shining-image" src="{{user_image}}" alt="Nisar Ahmed Md.">
+              </td>
+              <td>
+                <h3>Mohammed Nisar Ahmed</h3>
+              </td>
+            </tr>
+          </table>
           <p>
-            I'm Nisar Ahmed, I’m a third-year student learning Artificial Intelligence & Data Science at Vignan’s Institute of Information Technology, Brown belt (2nd degree) in Karate, Director for short film (NUMB), Rubik's cube PB sub 30 seconds, Esports enthusiast, Machine Learning & Deep Learning enthusiast.
+            About Me:<br>
+            I am Nisar Ahmed, a third-year student pursuing Artificial Intelligence & Data Science at Vignan’s Institute of Information Technology. I have been fascinated by the world of AI and Machine Learning since I was young, completing my first language 'C' at the age of 13 and Python at 16. My passion for technology led me to explore various fields, and I now have a strong interest in Deep Learning as well.
             <br>
            <center>
-            Hobbies / Interests:<br>
-            Film Making <br>
-            Gaming<br>
-            Editing<br>
-
+            Academic Achievements:<br>
+            Currently studying third-year bachelors in A.I at VIIT. <br>
+            Brown belt (2nd degree) in Karate achieved at the age of 15.
            </center>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="widget">
+
+      <div class="streak-container">
+        <div class="streak-bg"></div>
+        <div class="streak-content">
+          <!-- Add your introduction here -->
+          <h3>Interests & Hobbies</h3>
+          <p>
+            Director for the short film "NUMB," showcasing my passion for storytelling.<br>
+            An Esports enthusiast, spending time mastering games like Rocket League, Apex, CS: GO & Valorant.<br>
+            Avid Rubik's cube solver with a personal best of 31.23 seconds for 3x3 and 1.65 seconds for 2x2 cubes.<br>
+            Enthusiastic about music, vibing to pop and Hans Zimmer soundtracks.<br>
+            Love for editing photos and videos, with skills in Photoshop, Premiere Pro, and After Effects.<br>
+            Enjoy watching movies, TV series, and Anime, with a special admiration for Christopher Nolan & Hans Zimmer's work.<br>
+            Fluent in English and Hindi, with the ability to read and write Arabic and Hindi, and some proficiency in Telugu.<br>
+
           </p>
         </div>
       </div>
