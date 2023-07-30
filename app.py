@@ -122,12 +122,14 @@ app.config['UPLOAD_FOLDER']=picfolder
 def index():
     # Render your dashboard HTML here
     me=os.path.join(app.config['UPLOAD_FOLDER'],'me.webp')
-    return render_template('about.html',user_image=me)
+    hobbie=os.path.join(app.config['UPLOAD_FOLDER'],'hobbie.png')
+    return render_template('about.html',user_image=me,hobbie=hobbie)
 @app.route('/about')
 def about():
     # Render your dashboard HTML here
     me=os.path.join(app.config['UPLOAD_FOLDER'],'me.webp')
-    return render_template('about.html',user_image=me)
+    hobbie=os.path.join(app.config['UPLOAD_FOLDER'],'hobbie.png')
+    return render_template('about.html',user_image=me,hobbie=hobbie)
 @app.route('/productivity')
 def productivity():
     return render_template('productivity.html')
