@@ -62,6 +62,7 @@
     .widget h3 {
       margin-top: 10px;
       color: #70A5FD;
+      margin-left: 10px;
     }
     
     .streak-container {
@@ -86,29 +87,15 @@
     }
     
     .streak-image {
-      width: 40%;
-      height: auto;
+      width: 100px; /* Set the width of the image as desired */
+      height: 100px; /* Set the height of the image as desired *//* To make the image circular, if needed */
+      transition: 0.3s;
+      opacity: 1;
     }
-    #shining-image {
-    transition: transform 0.3s;
-}
 
-/* Add the shine effect on hover */
-#shining-image:hover::before {
-    content: "";
-    position: absolute;
-    top: -30%;
-    left: -30%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-#shining-image:hover {
-    transform: scale(1.1); /* Increase the image size on hover as desired */
-}
+    .streak-image:hover{
+      opacity: 0.6;
+    }
     .streak-number {
       font-size: 28px;
       font-weight: 700;
@@ -180,6 +167,17 @@
     .widget {
       width: 100%;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse; /* Merge the borders between cells */
+      table-layout: fixed; /* Equally divide the width of td elements */
+    }
+
+    td {
+      padding: 5px; /* Adjust the padding as per your preference */
+      border: 1px solid #E4E2E2; /* Add a border around the cells */
+      vertical-align: middle; /* Align content vertically centered */
+    }
   }
   </style>
 </head>
@@ -196,7 +194,7 @@
           
           <!-- Add your introduction here -->
           
-          <table>
+          <table style="table-layout: fixed;">
             <tr>
               <td>
                 <img class="streak-image" id="shining-image" src="{{user_image}}" alt="Nisar Ahmed Md.">
@@ -207,13 +205,14 @@
             </tr>
           </table>
           <p>
-            About Me:<br>
             I am Nisar Ahmed, a third-year student pursuing Artificial Intelligence & Data Science at Vignan’s Institute of Information Technology. I have been fascinated by the world of AI and Machine Learning since I was young, completing my first language 'C' at the age of 13 and Python at 16. My passion for technology led me to explore various fields, and I now have a strong interest in Deep Learning as well.
             <br>
            <center>
-            Academic Achievements:<br>
-            Currently studying third-year bachelors in A.I at VIIT. <br>
-            Brown belt (2nd degree) in Karate achieved at the age of 15.
+            <b>Academic Achievements</b>
+            <ul>
+              <li>Currently studying third-year bachelors in A.I at VIIT</li>
+              <li>Brown belt (2nd degree) in Karate achieved at the age of 15</li>
+            </ul>
            </center>
           </p>
         </div>
