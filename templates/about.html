@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About me</title>
+  <title>About</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -79,17 +79,29 @@
     }
     
     .streak-image {
-      width: 50%;
+      width: 40%;
       height: auto;
-      transition: 0.3s;
-      opacity: 0.6;
-      border: #1A1B27;
-      animation: normal;
     }
-    .streak-image:hover {
-      opacity: 1
-    }
+    #shining-image {
+    transition: transform 0.3s;
+}
 
+/* Add the shine effect on hover */
+#shining-image:hover::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#shining-image:hover {
+    transform: scale(1.1); /* Increase the image size on hover as desired */
+}
     .streak-number {
       font-size: 28px;
       font-weight: 700;
@@ -157,7 +169,7 @@
 </head>
 <body>
     <div>{% include 'navbar.html' %}</div>
-  <center><h1>About me</h1></center>
+  <center><h1>About</h1></center>
  <center>
   <div class="dashboard">
     <div class="widget">
@@ -165,7 +177,7 @@
       <div class="streak-container">
         <div class="streak-bg"></div>
         <div class="streak-content">
-          <img class="streak-image" src="{{user_image}}" alt="Nisar Ahmed Md.">
+          <img class="streak-image" id="shining-image" src="{{user_image}}" alt="Nisar Ahmed Md.">
           <!-- Add your introduction here -->
           <h3>Nisar Ahmed Mohammed</h3>
           <p>
