@@ -3,6 +3,15 @@
 <head>
   <title>About</title>
   <style>
+      @keyframes currstreak {
+                0% { font-size: 3px; opacity: 0.2; }
+                80% { font-size: 34px; opacity: 1; }
+                100% { font-size: 28px; opacity: 1; }
+            }
+               @keyframes fadein {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -60,6 +69,8 @@
       }
     }
     .widget h3 {
+      opacity: 0;
+      animation: fadein 0.5s linear forwards 0.3s;
       margin-top: 10px;
       color: #70A5FD;
       margin-left: 10px;
@@ -87,10 +98,11 @@
     }
     
     .streak-image {
+      opacity: 0; 
+      animation: fadein 0.5s linear forwards 0.5s;
       width: 100px; /* Set the width of the image as desired */
       height: 100px; /* Set the height of the image as desired *//* To make the image circular, if needed */
       transition: 0.3s;
-      opacity: 1;
     }
 
     .streak-image:hover{
@@ -182,6 +194,10 @@
       padding-bottom: 20px; /* Or padding-bottom: 15px; Adjust the value as needed */
 }
   }
+  .late{
+    opacity: 0; 
+      animation: fadein 0.5s linear forwards 0.6s;
+  }
   </style>
 </head>
 <body>
@@ -206,7 +222,7 @@
               </td>
             </tr>
           </table>
-          <p>
+          <div class="late"><p>
             I am Nisar Ahmed, a third-year student pursuing Artificial Intelligence & Data Science at Vignan’s Institute of Information Technology. I have been fascinated by the world of AI and Machine Learning since I was young, completing my first language 'C' at the age of 13 and Python at 16. My passion for technology led me to explore various fields, and I now have a strong interest in Deep Learning as well.
             <br>
            <center>
@@ -219,7 +235,7 @@
           </center>
            <p>My ultimate career goal is to work as an AI engineer at Boston Dynamics or become a Generative AI engineer. I am constantly exploring new horizons in the world of AI and technology, striving to create a positive impact through my work. With a diverse set of skills and interests, I am determined to carve a unique path in the ever-evolving field of Artificial Intelligence and Data Science.</p>
            
-          </p>
+          </p></div>
         </div>
       </div>
     </div>
@@ -239,7 +255,7 @@
               </td>
             </tr>
           </table>
-          <p>
+          <div class="late"><p>
             <ul style="text-align: left;">
               <li class="increased-distance">Director for the short film "NUMB", showcasing my passion for storytelling</li>
               <br> <li class="increased-distance">An Esports enthusiast, spending time mastering games like Rocket League, Apex, CS: GO & Valorant</li>
@@ -249,7 +265,7 @@
               <br><li class="increased-distance">Enjoy watching movies, TV series, and Anime, with a special admiration for Christopher Nolan & Hans Zimmer's work</li>
               <br><li class="increased-distance">Fluent in English and Hindi, with the ability to read and write Arabic and Hindi, and some proficiency in Telugu</li>
             </ul>
-          </p>
+          </p></div>
         </div>
       </div>
     </div>
