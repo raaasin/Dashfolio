@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <style>
+      @keyframes currstreak {
+                0% { font-size: 3px; opacity: 0.2; }
+                80% { font-size: 34px; opacity: 1; }
+                100% { font-size: 28px; opacity: 1; }
+            }
+               @keyframes fadein {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #1A1B27;
+      color: #E4E2E2;
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap; /* Added this to wrap the elements onto the next line */
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+    
+    
+    /* Default styles for h1 (for larger screens) */
+    h1 {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 700;
+      color: #70A5FD;
+      display: flex;
+    }
+
+    /* Media query for smaller screens (max-width: 768px) */
+    @media screen and (max-width: 1201px) {
+      h1 {
+        position: absolute; /* Remove fixed positioning */
+        top:50px;
+        font-size:medium;
+        text-align: center; /* Center the text within its container */
+        margin: 40px 0 20px; /* Add some margin for spacing between the merged navbars and the h1 */
+      }
+    }
+
+    .widget {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #E4E2E2;
+      border-radius: 5px;
+      width: 600px;
+      margin-top: 30px;
+      margin-bottom: 20px; /* Added this to add space between the widgets */
+      animation: trans 0.75s;
+    }
+    @keyframes trans {
+      from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+      }
+      to{
+        opacity: 1;
+        transform: rotateX(0)
+      }
+    }
+    .widget h3 {
+      opacity: 0;
+      animation: fadein 0.5s linear forwards 0.3s;
+      margin-top: 10px;
+      color: #70A5FD;
+      margin-left: 10px;
+    }
+    
+    .streak-container {
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+    
+    .streak-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1A1B27;
+      opacity: 0.8;
+    }
+    
+    .streak-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .streak-image {
+      opacity: 0; 
+      animation: fadein 0.5s linear forwards 0.5s;
+      width: 100px; /* Set the width of the image as desired */
+      height: 100px; /* Set the height of the image as desired *//* To make the image circular, if needed */
+      transition: 0.3s;
+    }
+
+    .streak-image:hover{
+      opacity: 0.6;
+    }
+    .streak-number {
+      font-size: 28px;
+      font-weight: 700;
+      color: #BF91F3;
+      animation: currstreak 0.6s linear forwards;
+    }
+    
+    /* New frame for projects and certifications */
+    .project-certification-frame {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #E4E2E2;
+      border-radius: 5px;
+      width: 350px;
+    }
+    
+    .project-certification-frame h3 {
+      margin-top: 0;
+      color: #70A5FD;
+    }
+
+    .project-certification-frame ul {
+      list-style-type: none; /* Remove bullet points */
+      padding: 0;
+    }
+
+    .project-certification-frame li {
+      color:#BF91F3;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .progress-bar {
+      width: 100px;
+      height: 10px;
+      background-color: #555;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: #70A5FD;
+    }
+    .widget a {
+      text-decoration: none; /* Remove underline */
+      color: #E4E2E2; /* Set the link color */
+      cursor: pointer; /* Show pointer cursor on hover */
+      
+    }
+
+    /* Set the link styles for visited and hover states */
+    .widget a:visited {
+      color: #E4E2E2;
+    }
+
+    .widget a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+    .streak-content p{
+      text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+
+    .widget {
+      width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse; /* Merge the borders between cells */
+      table-layout: fixed; /* Equally divide the width of td elements */
+    }
+
+    td {
+      padding: 5px; /* Adjust the padding as per your preference */
+      border: 1px solid #E4E2E2; /* Add a border around the cells */
+      vertical-align: middle; /* Align content vertically centered */
+    }
+    .increased-distance {
+      padding-bottom: 20px; /* Or padding-bottom: 15px; Adjust the value as needed */
+}
+  }
+  .late{
+    opacity: 0; 
+      animation: fadein 0.5s linear forwards 0.6s;
+  }
+  </style>
+</head>
+<body>
+    <div>{% include 'navbar.html' %}</div>
+  <center><h1>About</h1></center>
+  <div class="dashboard">
+    <div class="widget">
+
+      <div class="streak-container">
+        <div class="streak-bg"></div>
+        <div class="streak-content">
+          
+          <!-- Add your introduction here -->
+          
+          <table style="table-layout: fixed;">
+            <tr>
+              <td>
+                <img class="streak-image" id="shining-image" src="{{user_image}}" alt="Nisar Ahmed Md.">
+              </td>
+              <td>
+                <h3>Mohammed Nisar Ahmed</h3>
+              </td>
+            </tr>
+          </table>
+          <div class="late"><p>
+            I am Nisar Ahmed, a third-year student pursuing Artificial Intelligence & Data Science at Vignan’s Institute of Information Technology. I have been fascinated by the world of AI and Machine Learning since I was young, completing my first language 'C' at the age of 13 and Python at 16. My passion for technology led me to explore various fields, and I now have a strong interest in Deep Learning as well.
+            <br>
+           <center>
+            <b><u>Academic Achievements</u></b>
+            <ul>
+              <li class="increased-distance">Currently studying third-year bachelors in A.I at VIIT</li>
+              <li class="increased-distance">Brown belt (2nd degree) in Karate achieved at the age of 15</li>
+            </ul>
+            <b><u>Dream Job</u></b>
+          </center>
+           <p>My ultimate career goal is to work as an AI engineer at Boston Dynamics or become a Generative AI engineer. I am constantly exploring new horizons in the world of AI and technology, striving to create a positive impact through my work. With a diverse set of skills and interests, I am determined to carve a unique path in the ever-evolving field of Artificial Intelligence and Data Science.</p>
+           
+          </p></div>
+        </div>
+      </div>
+    </div>
+    <div class="widget">
+
+      <div class="streak-container">
+        <div class="streak-bg"></div>
+        <div class="streak-content">
+          <!-- Add your introduction here -->
+          <table style="table-layout: fixed;">
+            <tr>
+              <td>
+                <img class="streak-image" id="shining-image" src="{{hobbie}}" alt="Hobbies/Interest icon">
+              </td>
+              <td>
+                <h3>Interests & Hobbies</h3>
+              </td>
+            </tr>
+          </table>
+          <div class="late"><p>
+            <ul style="text-align: left;">
+              <li class="increased-distance"><a href="https://www.youtube.com/watch?v=aoMFpQipya8" target="_blank">Director for the short film "NUMB" , showcasing my passion for storytelling</a></li>
+              <br> <li class="increased-distance"><a href="https://liquipedia.net/rocketleague/User:Actualnano" target="_blank">An Esports enthusiast, spending time mastering games like Rocket League, Apex, CS: GO & Valorant</a></li>
+              <br><li class="increased-distance">Avid Rubik's cube solver with a personal best of 31.23 seconds for 3x3 and 1.65 seconds for 2x2 cubes</li>
+              <br><li class="increased-distance">Enthusiastic about music, vibing to pop and Hans Zimmer soundtracks</li>
+              <br><li class="increased-distance">Love for editing photos and videos, with skills in Photoshop, Premiere Pro, and After Effects</li>
+              <br><li class="increased-distance">Enjoy watching movies, TV series, and Anime, with a special admiration for Christopher Nolan & Hans Zimmer's work</li>
+              <br><li class="increased-distance">Fluent in English and Hindi, with the ability to read and write Arabic and Hindi, and some proficiency in Telugu</li>
+            </ul>
+          </p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
