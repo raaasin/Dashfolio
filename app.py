@@ -133,6 +133,9 @@ def about():
 @app.route('/productivity')
 def productivity():
     return render_template('productivity.html')
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 if __name__ == "__main__":
     # Start a background thread to update the data periodically
     background_thread = threading.Thread(target=update_data)
