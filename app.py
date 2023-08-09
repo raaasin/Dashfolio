@@ -56,7 +56,7 @@ def codechef():
 
 def gitupdate(totalcontrib, currentstreak, streakrange, longeststreak, longestrange):
     # Your gitupdate function
-    url = 'https://camo.githubusercontent.com/988eae0cabe627f25d27443aedf176fbfd283b04a06fb6e3479de60e8239d40a/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d7261616173696e267468656d653d746f6b796f6e6967687426686964655f626f726465723d74727565'
+    url = 'https://github-readme-streak-stats.herokuapp.com/?user=raaasin&theme=tokyonight&hide_border=true'
     response = requests.get(url)
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
