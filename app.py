@@ -139,6 +139,11 @@ def contact():
 @app.route('/blog')
 def blog():
     return render_template('blog.html')
+@app.route('/resume')
+def resume():
+    # Render your dashboard HTML here
+    res=os.path.join(app.config['UPLOAD_FOLDER'],'resume.pdf')
+    return render_template('resume.html',res=res)
 if __name__ == "__main__":
     # Start a background thread to update the data periodically
     background_thread = threading.Thread(target=update_data)
