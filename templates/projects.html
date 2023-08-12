@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About</title>
+  <script src="https://kit.fontawesome.com/2ffa0d5e9f.js" crossorigin="anonymous"></script>
+  <title>Projects</title>
   <style>
       @keyframes currstreak {
                 0% { font-size: 3px; opacity: 0.2; }
@@ -155,14 +156,14 @@
     }
     .widget a {
       text-decoration: none; /* Remove underline */
-      color: #E4E2E2; /* Set the link color */
+      color: #70A5FD; /* Set the link color */
       cursor: pointer; /* Show pointer cursor on hover */
       
     }
 
     /* Set the link styles for visited and hover states */
     .widget a:visited {
-      color: #E4E2E2;
+      color: #70A5FD;
     }
 
     .widget a:hover {
@@ -215,15 +216,17 @@
           <table style="table-layout: fixed;">
             <tr>
               <td>
-                
+                <i class="fa-solid fa-medal"></i>
               </td>
               <td>
-                <h3>Olympic Medals Predictor</h3>
+                <h3><a href="https://github.com/raaasin/olympicflaskml" target="_blank">Olympic Medals Predictor</a></h3>
               </td>
             </tr>
           </table>
           <div class="late"><p>
-            Example text
+            The Olympic Medal Prediction Web App is crafted using Python and the Flask framework. It employs a linear regression model trained on historical data to forecast a country's potential Olympic medal count. The app imports and refines data from teams.csv, capturing essential details about participating teams such as country, athlete count, and prior medals.
+<br><br>
+The heart of the application lies in its predictive engine. A linear regression model is trained with key predictors – athlete count and previous medals – and saved as olympic.pkl using Python's pickle serialization. Leveraging Flask's capabilities, the web app provides a user-friendly interface. Users can input a country's athlete count and previous medals to instantly access projected medal counts. Behind the scenes, the app loads the model from olympic.pkl and generates forecasts based on the user's data, offering valuable insights into potential Olympic success.
           </p></div>
         </div>
       </div>
@@ -237,7 +240,7 @@
           <table style="table-layout: fixed;">
             <tr>
               <td>
-                
+                <i class="fa-solid fa-house-medical"></i>   
               </td>
               <td>
                 <h3>Blood Centre Website</h3>
