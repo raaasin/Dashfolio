@@ -101,8 +101,7 @@
     .streak-image {
       opacity: 0; 
       animation: fadein 0.5s linear forwards 0.5s;
-      width: 100px; /* Set the width of the image as desired */
-      height: 100px; /* Set the height of the image as desired *//* To make the image circular, if needed */
+ /* Set the height of the image as desired *//* To make the image circular, if needed */
       transition: 0.3s;
     }
 
@@ -199,6 +198,16 @@
     opacity: 0; 
       animation: fadein 0.5s linear forwards 0.6s;
   }
+  .nis{
+    display: flex;
+    width: 80%;
+    height: auto;
+    border-radius: 3%;
+    transition: transform 0.3s ease;
+  }
+  .nis:hover{
+    transform: scale(1.05);
+  }
   </style>
 </head>
 <body>
@@ -224,9 +233,8 @@
             </tr>
           </table>
           <div class="late"><p>
-            The Olympic Medal Prediction Web App is crafted using Python and the Flask framework. It employs a linear regression model trained on historical data to forecast a country's potential Olympic medal count. The app imports and refines data from teams.csv, capturing essential details about participating teams such as country, athlete count, and prior medals.
-<br><br>
-The heart of the application lies in its predictive engine. A linear regression model is trained with key predictors – athlete count and previous medals – and saved as olympic.pkl using Python's pickle serialization. Leveraging Flask's capabilities, the web app provides a user-friendly interface. Users can input a country's athlete count and previous medals to instantly access projected medal counts. Behind the scenes, the app loads the model from olympic.pkl and generates forecasts based on the user's data, offering valuable insights into potential Olympic success.
+            The Olympic Medal Prediction Web App is crafted using Python and the Flak framework which employs a linear regression model trained on historical data to forecast a country's potenial medal count.
+            <center><a href="https://olympic-predictor.onrender.com/" target="_blank"><img class="nis" src="https://i.ibb.co/RNXyKNQ/Olympic.png"></a></center>
           </p></div>
         </div>
       </div>
@@ -248,17 +256,8 @@ The heart of the application lies in its predictive engine. A linear regression 
             </tr>
           </table>
           <div class="late"><p>
-            The New Life Blood Center website is a static platform developed with HTML, CSS, and JavaScript. Designed with responsiveness in mind, it encompasses multiple sections dedicated to educating visitors about the significance of blood donation, presenting technical insights regarding the center, and offering means of contact and inquiry.
-<br><br>
-Among its components, the website encompasses key pages:
-<br><br>
-1. **Homepage (index.html):** Serving as the website's initial point of engagement, this page offers a welcoming introduction.
-<br><br> 
-2. **About (about.html):** Here, visitors can delve into comprehensive information about the critical importance of blood donation.
-<br><br>
-3. **Branches (branches.html):** This section provides intricate technical specifications and details pertaining to the blood center.
-<br><br>
-Incorporating elements from the Font Awesome icon library and leveraging Google Fonts, the website achieves an appealing aesthetic while maintaining its functional purpose. These design enhancements contribute to a visually pleasing and informative user experience.
+            The New Life Blood Center website is a static platform.it encompasses multiple sections dedicated to educating visitors about the significance of blood donation and offering means of contact and inquiry.
+            <center><a href="https://raaasin.github.io/bloodcentrewebsite/index.html" target="_blank"><img class="nis" src="https://i.ibb.co/ggHX7B9/newlife.png"></a></center>
           </p></div>
         </div>
       </div>
