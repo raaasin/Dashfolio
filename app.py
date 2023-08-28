@@ -142,6 +142,9 @@ def blog():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+@app.route('/movies')
+def movies():
+    return render_template('10movies.html')
 @app.route('/resume')
 def resume():
     # Render your dashboard HTML here
