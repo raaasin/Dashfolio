@@ -1,4 +1,4 @@
-# Pdashboard (Personal Dashboard)
+# Dashfolio (Portfolio + Productivity Dashboard)
 
 Pdashboard is a productivity dashboard designed to help you keep track of your productivity by displaying your GitHub streak and CodeChef streak. This project is built using Flask and Python for the backend, and it utilizes web scraping to fetch data from GitHub and CodeChef. The dashboard interface is created using HTML and JavaScript.
 
