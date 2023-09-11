@@ -89,10 +89,6 @@ The Pdashboard utilizes web scraping techniques to fetch data from GitHub and Co
 
 Feel free to customize and enhance the project further as per your requirements. Contributions and suggestions are welcome!
 
-## Screenshot
-
-![Dashboard Widget](Dashboard.png)
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
